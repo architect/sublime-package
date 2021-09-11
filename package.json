@@ -13,9 +13,16 @@
 		"url": "https://github.com/architect/sublime-package/issues"
 	},
 	"scripts": {
-		"build": "rm arc.tmLanguage && cp node_modules/@architect/syntaxes/arc.tmLanguage ./"
+		"build": "node prefs && rm arc.tmLanguage && cp node_modules/@architect/syntaxes/arc.tmLanguage ./",
+		"lint": "eslint . --fix"
 	},
 	"devDependencies": {
-		"@architect/syntaxes": "git+https://github.com/architect/syntaxes.git"
+		"@architect/eslint-config": "^2.0.0",
+		"@architect/syntaxes": "git+https://github.com/architect/syntaxes.git",
+		"eslint": "^7.32.0",
+		"plist": "^3.0.4"
+	},
+	"eslintConfig": {
+		"extends": "@architect/eslint-config"
 	}
 }

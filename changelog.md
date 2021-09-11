@@ -16,8 +16,7 @@ We've finally brought it home to @architect, given it a full rewrite, fixed a bu
   - Quoted strings also support linebreaks
   - Additionally, quoted strings support escaped string chars (`"They said, \"Hi.\""`)
   - Finally, quoted strings support unicode!
-- Added auto-surrounding pairs support
-  - Select something, then use a double, single, or backtick quote, and it'll auto-surround
+- Added support for Sublime Text comment shortcut (`settings.shellVariables`)
 
 
 ### Fixed
