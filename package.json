@@ -1,6 +1,6 @@
 {
 	"name": "@architect/sublime-package",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Official Sublime Text package for Architect, including syntax highlighting for the Architect file format (app.arc, .arc, config.arc, and prefs.arc)",
 	"author": "Ryan Block <hello@ryanblock.com>",
 	"license": "Apache-2.0",
