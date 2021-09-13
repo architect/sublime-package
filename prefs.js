@@ -8,7 +8,7 @@ let textMatePrefs = {
     shellVariables: [
       {
         name: 'TM_COMMENT_START',
-        value: '#',
+        value: '# ',
       }
     ]
   }
