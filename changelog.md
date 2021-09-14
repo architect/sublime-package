@@ -7,7 +7,6 @@
 ### Added
 
 - Added invalid character flags when unescaped quotes are found inside a quoted string
-- Added tests via `vscode-tmgrammar-test`
 
 
 ### Changed
