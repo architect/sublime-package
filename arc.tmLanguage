@@ -36,9 +36,9 @@
       </dict>
       <dict>
         <key>comment</key>
-        <string>map properties (only); map (and vector) names cannot be detected</string>
+        <string>map properties &amp; implied vector values; map / vector names cannot be detected</string>
         <key>begin</key>
-        <string>(^[\t ]{2})(?!#)(\S+)(?!\s*#)(?=([\t ]\S+))</string>
+        <string>(^[\t ]{2})(?!#)([^#\s]+)(?!\s*#)(?=(([\t ]+)\S+))</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>
@@ -120,7 +120,7 @@
               </dict>
             </dict>
             <key>end</key>
-            <string>(")</string>
+            <string>(")(?=\s|#|$)</string>
             <key>endCaptures</key>
             <dict>
               <key>0</key>
@@ -136,6 +136,12 @@
                 <string>string.quoted.double.arc</string>
                 <key>match</key>
                 <string>(\\")</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>invalid.illegal.arc</string>
+                <key>match</key>
+                <string>"</string>
               </dict>
             </array>
           </dict>
@@ -153,7 +159,7 @@
               </dict>
             </dict>
             <key>end</key>
-            <string>(')</string>
+            <string>(')(?=\s|#|$)</string>
             <key>endCaptures</key>
             <dict>
               <key>0</key>
@@ -169,6 +175,12 @@
                 <string>string.quoted.single.arc</string>
                 <key>match</key>
                 <string>(\\')</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>invalid.illegal.arc</string>
+                <key>match</key>
+                <string>'</string>
               </dict>
             </array>
           </dict>
@@ -186,7 +198,7 @@
               </dict>
             </dict>
             <key>end</key>
-            <string>(`)</string>
+            <string>(`)(?=\s|#|$)</string>
             <key>endCaptures</key>
             <dict>
               <key>0</key>
@@ -203,13 +215,19 @@
                 <key>match</key>
                 <string>(\\`)</string>
               </dict>
+              <dict>
+                <key>name</key>
+                <string>invalid.illegal.arc</string>
+                <key>match</key>
+                <string>`</string>
+              </dict>
             </array>
           </dict>
           <dict>
             <key>name</key>
             <string>string.unquoted.arc</string>
             <key>match</key>
-            <string>(?&lt;=\s|^|\G)([a-zA-Z0-9!$%^&amp;*(){}\[\]&lt;&gt;\-_\+=\|\\:;,\.\?/~]+)(?=\s|#|$)</string>
+            <string>(?&lt;=\s|^|\G)([a-zA-Z0-9!$%^&amp;*(){}\[\]&lt;&gt;\-_\+=\|\\:;"',\.\?/`~]+)(?=\s|#|$)</string>
           </dict>
         </array>
       </dict>

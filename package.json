@@ -13,7 +13,7 @@
 		"url": "https://github.com/architect/sublime-package/issues"
 	},
 	"scripts": {
-		"build": "node prefs && rm arc.tmLanguage && cp node_modules/@architect/syntaxes/arc.tmLanguage ./",
+		"build": "node prefs && rm -rf node_modules/@architect arc.tmLanguage && npm i && cp node_modules/@architect/syntaxes/arc.tmLanguage ./",
 		"lint": "eslint . --fix"
 	},
 	"devDependencies": {
